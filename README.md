@@ -2,8 +2,7 @@
 
 This repository contains the hardware design files (Altium Designer) for a custom current sensing module designed for 36V DC systems. It features a high-side current measurement circuit using the **INA240** amplifier and an integrated **LM5017** DC-DC buck converter to power low-voltage logic circuits.
 
-![3D View of the PCB](44.png)
-*(Note: Replace '44.png' with the actual path to your 3D view image)*
+![3D View of the PCB](PCB_3D.png)
 
 ## 📖 Project Overview
 
@@ -30,17 +29,17 @@ This module was designed to monitor the current consumption of DC motors in a ro
 
 The system connects between the main battery and the motor driver. The sensed current is amplified and sent to the MCU's ADC pin.
 
-![System Block Diagram](11.png)
+![System Block Diagram](Block_Diagram.png)
 
 ### Current Sensing Stage
 The INA240 is configured to measure the voltage drop across the shunt resistor placed on the 36V line.
 
-![Schematic - Current Sense](22.png)
+![Schematic - Current Sense](Current_Sense_Sch.png)
 
 ### Power Management Stage
 The 36V input is regulated down to 5V to ensure the sensor and connected MCU operate without an external power source.
 
-![Schematic - Buck Converter](33.png)
+![Schematic - Buck Converter](36V_To_5V_Sch.png)
 
 ## ⚠️ Design Notes & Disclaimer
 
